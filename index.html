@@ -75,7 +75,7 @@
         }
       </style>
 	</head>
-	<body class="claro">
+	<body class="claro" onload="change_web()">
 		<style>
 			/* CUSTOM CSS RULES */
           #Top-panel-One{
@@ -332,5 +332,20 @@
 		</script>
           </div>
 	</body>
+
+	<script type="text/javascript">
+		var logo, logoimg;
+		function change_web(){
+			/*cambiamos el logo*/
+			logoimg = document.getElementsByClassName('logoImg');
+			logoimg[1].removeAttribute("src");
+			logoimg[1].setAttribute("src", "img/wwf.png");
+			/*cambiamos la url*/
+			logo = document.getElementsByClassName('logoLink');
+			logo[1].removeAttribute("href");
+			logo[1].setAttribute("href", "http://www.wwf.es");
+		}
+
+	</script>
 			
 </html>
