@@ -70,67 +70,55 @@
 				pathJSAPI: '//js.arcgis.com/3.16/'
 			};
 		</script>
-      <style>
-        #headerDesktop{
-          background-color: rgba(40, 50, 57,0)
-        }
-      </style>
-
-      	<script type="text/javascript">
-				var logoimg, logo, story;
+  
+    <script type="text/javascript">
+			var logoimg, logo, story;
 				$("document").ready(function () {
-				$("img").load(function(){
-    
-
-						/*cambiamos el logo*/
-						logoimg = $('.logoImg');
-						$.each(logoimg, function() {
-			  			logoimg.remove("src");
-							logoimg.attr("src", "img/wwf.png");
-								});
-						
-						logoimg = $('.logoLink');
-						$.each(logoimg, function() {
-			  			logoimg.remove("href");
-							logoimg.attr("href", "http://www.wwf.es");
-								});
-
-						logoimg = $('.link');
-						$.each(logoimg, function() {
-			  			logoimg.remove("href, target");
-							logoimg.html("El amazonas el pulmon del mundo");
-								});
-
-			});
-
-		});
-
-	</script>
-
+					$("img").load(function(){
+			    
+									/*cambiamos el logo*/
+									logoimg = $('.logoImg');
+									$.each(logoimg, function() {
+						  			logoimg.remove("src");
+										logoimg.attr("src", "img/wwf.png");
+									});
+									/*cambiamos el link*/
+									logoimg = $('.logoLink');
+									$.each(logoimg, function() {
+						  			logoimg.remove("href");
+										logoimg.attr("href", "http://www.wwf.es");
+									});
+										/*cambiamos descripcion story map*/
+									logoimg = $('.link');
+									$.each(logoimg, function() {
+						  			logoimg.remove("href, target");
+										logoimg.html("El amazonas el pulmon del mundo");
+									});
+					});
+				});
+		</script>
 
 	</head>
 	<body class="claro">
 		<style>
 			/* CUSTOM CSS RULES */
-          #Top-panel-One{
-            /*top: 200px;
-            left:200px;
-            width: 100px;*/
-            height:100%;
-          }
-          #texto{
-            top:50px;
-            left:50px;
-          }
-            
-         
-          #header {
-           background: rgba(68, 68, 68, 0.06);    
-          }
+        #Top-panel-One{
+          height:100%;
+        }
 
-           #headerDesktop{ 
+        #texto{
+          top:50px;
+          left:50px;
+        }
+            
+        #header {
+          background: rgba(68, 68, 68, 0.06);    
+        }
+
+        #headerDesktop{ 
           background-color: #36502D !important;
         }
+
         #nav-bar{ 
           background-color: #36502D !important;
         }
@@ -139,39 +127,43 @@
     			background-color: rgba(0, 0, 0, 0)!important; 
     			box-shadow: none !important;
     		}
+
         .linkContainer a:hover{
-        	 text-decoration: none;
+        	text-decoration: none;
         }
+
         .mapCommandHomeBtn {
         	background: none;
-    background-image:  url("img/tree.png");
-    background-repeat: no-repeat;
-    background-position: 5px 5px;
-    } 
+			    background-image:  url("img/tree.png");
+			    background-repeat: no-repeat;
+			    background-position: 5px 5px;
+			  } 
 
-    .mapCommandLocation{
-    background-image:  url("img/foot.png");
-    background-repeat: no-repeat;
-    background-position: 5px 5px;
-    } 
+			  .mapCommandLocation{
+			    background-image:  url("img/foot.png");
+			    background-repeat: no-repeat;
+			    background-position: 5px 5px;
+			  } 
 
-    .arcgisSearch .searchCollapsed .searchSubmit{
-    	background-image:  url("img/search.png");
-    background-repeat: no-repeat;
-    background-position: 5px 5px;
-    }
-    .esri-icon-search:before {
-    content: none;
-}
+			  .arcgisSearch .searchCollapsed .searchSubmit{
+			    	background-image:  url("img/search.png");
+			    background-repeat: no-repeat;
+			    background-position: 5px 5px;
+			  }
 
-    .nav-bar .nav > .entry .entryLbl, .nav-bar .dropdown-toggle {
-    color: #4A8C3F;
-    background-color: #EFE2E2 !important;
-			}
-			.nav-bar .dropdown:not(.active):hover .dropdown-toggle, .nav-bar li:not(.active) .entryLbl:hover {
-    color: #F1EFE8;
-    background-color: #DC9108 !important;
-}
+			  .esri-icon-search:before {
+			    content: none;
+				}
+
+			  .nav-bar .nav > .entry .entryLbl, .nav-bar .dropdown-toggle {
+			    color: #4A8C3F;
+			    background-color: #EFE2E2 !important;
+				}
+
+				.nav-bar .dropdown:not(.active):hover .dropdown-toggle, .nav-bar li:not(.active) .entryLbl:hover {
+			    color: #F1EFE8;
+			    background-color: #DC9108 !important;
+				}
 
 		</style>
 		
@@ -396,7 +388,4 @@
 		</script>
           </div>
 	</body>
-
-
-			
 </html>
