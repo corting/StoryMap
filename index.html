@@ -105,7 +105,10 @@
     			background-color: rgba(0, 0, 0, 0)!important; 
     			box-shadow: none !important;
     		}
-        
+        .linkContainer a:hover{
+        	 text-decoration: none;
+        }
+
           #FULL{
             
             width: 75%;
@@ -342,16 +345,19 @@
 	</body>
 
 	<script type="text/javascript">
-		var logo, logoimg, story;
+		var logoimg, logo, story;
 		function change_web(){
+					
 			/*cambiamos el logo*/
 			logoimg = document.getElementsByClassName('logoImg');
 			logoimg[1].removeAttribute("src");
 			logoimg[1].setAttribute("src", "img/wwf.png");
+
 			/*cambiamos la url*/
 			logo = document.getElementsByClassName('logoLink');
 			logo[1].removeAttribute("href");
 			logo[1].setAttribute("href", "http://www.wwf.es");
+	
 			/*cambia story map*/
 			story = document.getElementsByClassName('link');
 			story[1].removeAttribute("href");
