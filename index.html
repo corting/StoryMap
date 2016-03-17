@@ -8,6 +8,7 @@
 		<meta name="fragment" content="!">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 		
 		<link type="image/ico" rel="shortcut icon" href="resources/tpl/viewer/icons/favicon.ico">
 		<link type="image/ico" rel="icon"  href="resources/tpl/viewer/icons/favicon.ico">
@@ -74,8 +75,41 @@
           background-color: rgba(40, 50, 57,0)
         }
       </style>
+
+      	<script type="text/javascript">
+				var logoimg, logo, story;
+				$("document").ready(function () {
+				$("img").load(function(){
+    
+
+						/*cambiamos el logo*/
+						logoimg = $('.logoImg');
+						$.each(logoimg, function() {
+			  			logoimg.remove("src");
+							logoimg.attr("src", "img/wwf.png");
+								});
+						
+						logoimg = $('.logoLink');
+						$.each(logoimg, function() {
+			  			logoimg.remove("href");
+							logoimg.attr("href", "http://www.wwf.es");
+								});
+
+						logoimg = $('.link');
+						$.each(logoimg, function() {
+			  			logoimg.remove("href, target");
+							logoimg.html("El amazonas el pulmon del mundo");
+								});
+
+			});
+
+		});
+
+	</script>
+
+
 	</head>
-	<body class="claro" onload="change_web()">
+	<body class="claro">
 		<style>
 			/* CUSTOM CSS RULES */
           #Top-panel-One{
@@ -115,6 +149,15 @@
     background-position: 5px 5px;
     } 
 
+    .nav-bar .nav > .entry .entryLbl, .nav-bar .dropdown-toggle {
+    color: #4A8C3F;
+    background-color: #EFE2E2 !important;
+			}
+			.nav-bar .dropdown:not(.active):hover .dropdown-toggle, .nav-bar li:not(.active) .entryLbl:hover {
+    color: #F1EFE8;
+    background-color: #DC9108 !important;
+}
+
           #FULL{
             
             width: 75%;
@@ -125,6 +168,8 @@
           }
           body{
             background-image: url("http://www.planetaazul.com.mx/site/wp-content/uploads/2011/07/biodiversidad.jpg");
+            background-repeat: no-repeat;
+            width: 100%;
           }
 		</style>
 		<div id="FULL">
@@ -350,27 +395,6 @@
           </div>
 	</body>
 
-	<script type="text/javascript">
-		var logoimg, logo, story;
-		function change_web(){
-					
-			/*cambiamos el logo*/
-			logoimg = document.getElementsByClassName('logoImg');
-			logoimg[1].removeAttribute("src");
-			logoimg[1].setAttribute("src", "img/wwf.png");
 
-			/*cambiamos la url*/
-			logo = document.getElementsByClassName('logoLink');
-			logo[1].removeAttribute("href");
-			logo[1].setAttribute("href", "http://www.wwf.es");
-	
-			/*cambia story map*/
-			story = document.getElementsByClassName('link');
-			story[1].removeAttribute("href");
-			story[1].removeAttribute("target");
-			story[1].innerHTML = "El amazonas el pulmon del mundo";
-		}
-
-	</script>
 			
 </html>
