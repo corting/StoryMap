@@ -97,6 +97,14 @@
            #headerDesktop{ 
           background-color: #36502D !important;
         }
+        #nav-bar{ 
+          background-color: #36502D !important;
+        }
+
+        #loadingOverlay {
+    			background-color: rgba(0, 0, 0, 0)!important; 
+    			box-shadow: none !important;
+    		}
         
           #FULL{
             
@@ -116,7 +124,7 @@
 		
 		<!-- Header -->
 		<div id="header"  class="mainViewAboveMap">
-          <div id="Top-panel-One"><h1>Top-panel-One</h1></div>
+          <div id="Top-panel-One"></div>
 			<!-- Mobile header -->
 			<div id="headerMobile" class="headerMobile mobileView">
 				<div class="header">
@@ -334,7 +342,7 @@
 	</body>
 
 	<script type="text/javascript">
-		var logo, logoimg;
+		var logo, logoimg, story;
 		function change_web(){
 			/*cambiamos el logo*/
 			logoimg = document.getElementsByClassName('logoImg');
@@ -344,6 +352,11 @@
 			logo = document.getElementsByClassName('logoLink');
 			logo[1].removeAttribute("href");
 			logo[1].setAttribute("href", "http://www.wwf.es");
+			/*cambia story map*/
+			story = document.getElementsByClassName('link');
+			story[1].removeAttribute("href");
+			story[1].removeAttribute("target");
+			story[1].innerHTML = "El amazonas el pulmon del mundo";
 		}
 
 	</script>
